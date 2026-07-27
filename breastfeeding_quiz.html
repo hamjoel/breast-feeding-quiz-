@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breastfeeding Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf2f8;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #b91c5c;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .options label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 16px;
+      background: #ec4899;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover {
+      background: #db2777;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #0f766e;
+    }
+    .answer-sheet {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff1f5;
+      border-radius: 8px;
+      display: none;
+    }
+    .footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .footer a {
+      color: #b91c5c;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Breastfeeding Quiz</h1>
+    <form id="quizForm">
+      <div class="question">
+        <p>1. A newborn’s stomach is very small. On day 1, about how much can it hold?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="A"> A. 5–10 mL</label>
+          <label><input type="radio" name="q1" value="B"> B. 30–60 mL</label>
+          <label><input type="radio" name="q1" value="C"> C. 100 mL</label>
+          <label><input type="radio" name="q1" value="D"> D. 250 mL</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. By day 3, the newborn stomach is usually about the size of a:</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="A"> A. Cherry</label>
+          <label><input type="radio" name="q2" value="B"> B. Walnut</label>
+          <label><input type="radio" name="q2" value="C"> C. Lemon</label>
+          <label><input type="radio" name="q2" value="D"> D. Orange</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>3. By day 7, the newborn stomach is closer to the size of a:</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="A"> A. Small marble</label>
+          <label><input type="radio" name="q3" value="B"> B. Large egg</label>
+          <label><input type="radio" name="q3" value="C"> C. Golf ball</label>
+          <label><input type="radio" name="q3" value="D"> D. Tennis ball</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>4. Mild discomfort during breastfeeding is often:</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="A"> A. Always dangerous</label>
+          <label><input type="radio" name="q4" value="B"> B. A normal part of learning</label>
+          <label><input type="radio" name="q4" value="C"> C. A sign to stop immediately</label>
+          <label><input type="radio" name="q4" value="D"> D. Only caused by infection</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>5. Which of these is a warning sign during breastfeeding?</p>
+        <div class="options">
+          <label><input type="radio" name="q5" value="A"> A. Mild tingling</label>
+          <label><input type="radio" name="q5" value="B"> B. Sharp pain that continues</label>
+          <label><input type="radio" name="q5" value="C"> C. Slight pressure</label>
+          <label><input type="radio" name="q5" value="D"> D. Temporary discomfort</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>6. The father’s role in breastfeeding can include:</p>
+        <div class="options">
+          <label><input type="radio" name="q6" value="A"> A. Only bottle feeding</label>
+          <label><input type="radio" name="q6" value="B"> B. Providing support, patience, and practical help</label>
+          <label><input type="radio" name="q6" value="C"> C. Replacing the mother completely</label>
+          <label><input type="radio" name="q6" value="D"> D. Avoiding involvement</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>7. Before helping a mother breastfeed, a nurse should first:</p>
+        <div class="options">
+          <label><input type="radio" name="q7" value="A"> A. Ask about comfort and positioning</label>
+          <label><input type="radio" name="q7" value="B"> B. Start feeding immediately</label>
+          <label><input type="radio" name="q7" value="C"> C. Ignore the mother’s feelings</label>
+          <label><input type="radio" name="q7" value="D"> D. Only focus on the baby</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>8. Which is an important thing a nurse should check before helping a mother breastfeed?</p>
+        <div class="options">
+          <label><input type="radio" name="q8" value="A"> A. Whether the mother is comfortable</label>
+          <label><input type="radio" name="q8" value="B"> B. Whether the room is noisy</label>
+          <label><input type="radio" name="q8" value="C"> C. Whether the baby is asleep</label>
+          <label><input type="radio" name="q8" value="D"> D. Whether the father is present</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>9. A good breastfeeding support person should:</p>
+        <div class="options">
+          <label><input type="radio" name="q9" value="A"> A. Pressure the mother to continue</label>
+          <label><input type="radio" name="q9" value="B"> B. Respect the mother’s pace and choices</label>
+          <label><input type="radio" name="q9" value="C"> C. Compare her to other mothers</label>
+          <label><input type="radio" name="q9" value="D"> D. Ignore her concerns</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>10. The best way to help a breastfeeding mother is to:</p>
+        <div class="options">
+          <label><input type="radio" name="q10" value="A"> A. Give gentle support and correct information</label>
+          <label><input type="radio" name="q10" value="B"> B. Tell her to stop if there is any discomfort</label>
+          <label><input type="radio" name="q10" value="C"> C. Ignore her questions</label>
+          <label><input type="radio" name="q10" value="D"> D. Only focus on the baby’s weight</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+    <div id="result"></div>
+    <div id="answerSheet" class="answer-sheet"></div>
+
+    <div class="footer">
+      <p>Created by Ham Joel Raj .M</p>
+      <p>
+        Email: <a href="mailto:hamjoel7777@gmail.com">hamjoel7777@gmail.com</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/hamjoel23" target="_blank">www.linkedin.com/in/hamjoel23</a><br>
+        Blog: <a href="https://medicaeducate.blogspot.com/" target="_blank">https://medicaeducate.blogspot.com/</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: 'A',
+        q2: 'B',
+        q3: 'C',
+        q4: 'B',
+        q5: 'B',
+        q6: 'B',
+        q7: 'A',
+        q8: 'A',
+        q9: 'B',
+        q10: 'A'
+      };
+
+      let score = 0;
+      for (let i = 1; i <= 10; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected && selected.value === answers[`q${i}`]) {
+          score++;
+        }
+      }
+
+      let appreciation = '';
+      if (score >= 9) {
+        appreciation = 'Excellent! You have a strong understanding of breastfeeding basics.';
+      } else if (score >= 7) {
+        appreciation = 'Great job! You know a lot about breastfeeding and baby care.';
+      } else if (score >= 5) {
+        appreciation = 'Good effort! You are learning well, and a little more practice will help.';
+      } else {
+        appreciation = 'Keep learning! Breastfeeding knowledge grows with practice and support.';
+      }
+
+      document.getElementById('result').innerHTML = `Your score: ${score}/10<br>${appreciation}`;
+
+      const answerSheet = document.getElementById('answerSheet');
+      answerSheet.style.display = 'block';
+      answerSheet.innerHTML = `
+        <h3>Answer Sheet</h3>
+        <p><strong>1.</strong> A &nbsp; <strong>2.</strong> B &nbsp; <strong>3.</strong> C</p>
+        <p><strong>4.</strong> B &nbsp; <strong>5.</strong> B &nbsp; <strong>6.</strong> B</p>
+        <p><strong>7.</strong> A &nbsp; <strong>8.</strong> A &nbsp; <strong>9.</strong> B</p>
+        <p><strong>10.</strong> A</p>
+      `;
+    }
+  </script>
+</body>
+</html>
